@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текст</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="nav">
+        <a href="Головна_сторінка.html"><img src="images/logo1.svg" alt="logo"></a>
+        <div class="navigation">
+            <ul>
+                <img id="menu_btn_cross" src="images/menu_cross.svg" alt="Значок для закрытия меню">
+                <li><a href="Головна_сторінка.html">Головна</a></li>
+                <li><a href="Головна_сторінка.html#section2">Уроки</a></li>
+            </ul>
+            <img id="menu_btn" src="images/menu.svg" alt="Значок для открытия меню">
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container2">
+            <img src="images/page3_image.png" alt="Изображение текста">
+            <h1>Урок 2. Текст</h1>
+        </div>
+    </header>
+
+    <!--SECTION THEORY -->
+    <section id="theory">
+        <h1 class="head">Трохи теорії</h1>
+        <h3><span class="highlighted">Блокові та рядкові елементи</span></h3>
+
+        <p class="main_text">В цьому уроці ми розберемо основні елементи для форматування та групування тексту.<br> В HTML є два типи елементів: <span style="font-weight:500;">блокові</span> та <span style="font-weight:500;">рядкові</span>. </p>
+        <p class="main_text">Блокові елементи використовуються для організації контенту на сторінці. Вони створюють прямокутні блоки, які займають всю доступну ширину на сторінці і починаються з нового рядка. 
+                Вони дозволяють створювати розділи та групи контенту, такі як заголовки, абзаци тощо. Блокові елементи можуть містити інші блокові, а також рядкові елементи.</p>
+        <p class="main_text">Рядкові елементи, навпаки, використовуються для створення контенту всередині блокових елементів і не створюють новий рядок. 
+            Вони відображаються всередині блокових елементів і дозволяють додавати до тексту стилі та форматування, такі як жирний, курсивний шрифт тощо.</p>
+        <p class="main_text">Нижче приведений приклад із використанням блокових (<span style="font-weight:500;">&lt;h1>, &lt;h2>, &lt;h3>, &lt;h4>, &lt;h5>, &lt;h6>, &lt;p></span>) та рядкових (<span style="font-weight:500;">&lt;strong>, &lt;em>, &lt;br></span>) тегів.</p>
+        <div class="container_image">
+            <img src="images/page3_theory1.svg" alt="">
+        </div>
+        <p class="main_text">А тепер детальніше про кожний елемент.</p>
+        <p class="main_text"><span style="font-weight:500;">h1, h2, h3, h4, h5, h6</span> – це блочні елементи, які використовуються для створення заголовків на сторінці. h1 – це найбільший заголовок, а h6, відповідно, – найменший. Зазвичай на сторінці використовуються не всі заголовки, а лише кілька, щоб логічно розділити сторінку на секції та покращити її структуру.</p>
+        <p class="main_text"><span style="font-weight:500;">p</span> – це блочний елемент, який використовується для створення тексту, який відображатиметься у вигляді абзаців. Щоразу, коли ви бажаєте створити новий абзац, потрібно використовувати цей тег.</p>
+        <p class="main_text"><span style="font-weight:500;">strong</span> – це рядковий елемент, який використовується для виділення тексту, який має бути особливо важливим. Візуально цей текст зазвичай відображається жирним шрифтом.</p>
+        <p class="main_text"><span style="font-weight:500;">em</span> – це рядковий елемент, який використовується для виділення тексту, який має бути акцентованим. Візуально цей текст зазвичай відображається курсивом.</p>
+        <p class="main_text"><span style="font-weight:500;">br</span> – це рядковий елемент, який використовується для створення переносу рядку, тобто переходу тексту на новий рядок без створення нового абзацу. До речі, цей тег, на відміну від інших, не має тегу, що закривається.</p>
+        <p class="main_text">Тепер розглянемо другу половину цих елементів: блокові теги <span style="font-weight:500;">&lt;header>, &lt;footer>, &lt;nav>, &lt;section>, &lt;div></span> та рядковий тег <span style="font-weight:500;">&lt;span></span>. Нижче приведене зображення веб-сторінки та теги, в які були заключені блоки сторінки.</p>
+        <div class="container_image">
+            <img src="images/page3_theory2.svg" alt="">
+        </div>
+        <p class="main_text">Знову детальніше про кожний елемент.</p>
+        <p class="main_text">Почнемо із семантичних елементів. Це елементи HTML, які використовуються для опису структури вмісту веб-сторінки, позначаючи значення та призначення кожного елемента для браузера та пошукових систем, тим самим відокремлюючи веб-сторінку на більш логічні блоки. Вони дозволяють розробникам створювати більш зрозумілий код, що легко читається, а також підвищують доступність і SEO-оптимізацію сайту.
+            В прикладі використовуються чотири найпоширеніші семантичні елементи – &lt;header>, &lt;nav>, &lt;section>, &lt;footer>.
+        </p>
+        <p class="main_text">Елемент <span style="font-weight:500;">header</span> використовується для визначення верхньої частини веб-сторінки, яка зазвичай містить заголовок, логотип, пошукову форму та інші важливі елементи. </p>
+        <p class="main_text">Елемент <span style="font-weight:500;">nav</span> використовується для визначення блоку навігації на веб-сторінці. Він містить посилання на інші сторінки сайту або на окремі розділи.</p>
+        <p class="main_text">Елемент <span style="font-weight:500;">section</span> використовується для групування пов'язаного контенту. Один з основних прикладів використання даного елементу полягає в тому, щоб розділити сторінку на розділи, наприклад: "Про нас", "Послуги", "Контакти".</p>
+        <p class="main_text">Елемент <span style="font-weight:500;">footer</span> використовується для визначення нижньої частини веб-сторінки, яка зазвичай містить інформацію про автора сторінки, посилання на соціальні мережі, копірайт та інші елементи. </p>
+        <p class="main_text">Ще один елемент, зазначений в прикладі, це елемент <span style="font-weight:500;">div</span>. Він не має семантичного значення. Елемент div є одним з найбільш поширених елементів в HTML, і він зазвичай використовується як блок контейнер для групування і оформлення інших елементів. Основне призначення елементу div полягає в тому, щоб допомогти в створенні логічних блоків вмісту із стилістичним оформленням.
+        У вищезазначеному прикладі даний елемент групує елементи секції, де йде мова про послуги. Кожна послуга знаходиться в окремому контейнері, завдяки чому можна застосовувати різні стилі, або просто згрупувати для поліпшення читаності коду.</p>
+        <p class="main_text">Щодо елементу <span style="font-weight:500;">span</span>. В прикладі в секції з контактами можна побачити номер телефону, виділений іншим кольором. Для цього був застосований саме цей елемент: <span style="color: brown;">&lt;span style=”color: brown”>095 95 171 08&lt;/span></span>. Таким чином, елемент span використовується для відображення, що важливо, невеликого фрагменту тексту або контенту в межах іншого елементу, зазвичай для зміни його стилю.</p>
+    </section>
+    <!--SECTION PRACTICE -->
+    <section id="practice">
+        <h1 class="head">Нарешті практика</h1>
+        <p class="main_text">В прикладі використані усі елементи, які були розглянуті в блоці із <a href="Сторінка3_Текст.html#theory">теорією</a>. За винятком елементів h4-h6, які, як було зазначено, зазвичай в повному складі на веб-сторінці не застосовуються. </p>
+        <p class="main_text">В прикладі сайт розподілений на семантичні блоки — із навігацією, заголовком, основною секцією з контентом та підвалом. Основна секція з контентом містить блоки "Послуги", "Про нас" та "Зв'язок з нами". В блоці із переліком послуг для перенесення кожної послуги на новий рядок використовується елемент <span style="font-weight:500;">br</span>. В наступному уроці він буде замінений на елементи списку.</p>
+        <p class="main_text">В блоці із заголовком сайту продемонстроване використання елементів <span style="font-weight:500;">strong, em</span> та <span style="font-weight:500;">span</span>. До елементу span застосований певний стиль: в ньому присутній атрибут style із властивістю, яка зменшує жирність шрифту. Детальніше про застосування стилів на сайті буде розглянуто в одному з наступних уроців.</p>
+        <p class="codepen" data-height="400" data-default-tab="html,result" data-slug-hash="ExdwyaB" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/ExdwyaB">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> <br><br>
+
+        <p class="main_text">Таким чином, ми розібралися із основами групування та форматування тексту на веб-сторінці. </p>
+
+        <div class="container_for_buttons">
+            <button class="buttons_lessons"><a href="Структура_HTML.html">Попередній урок</a></button>
+            <button class="buttons_lessons"><a href="Сторінка4_Списки.html">Наступний урок</a></button>
+        </div>    
+    </section>
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer_col">
+            <li><a href="Головна_сторінка.html">Головна</a></li>
+        </div>
+        <div class="footer_col">
+            <a href="Головна_сторінка.html"><img src="images/logo_footer.svg" alt=""></a>
+        </div>
+        <div class="footer_col">
+            <li><a href="Головна_сторінка.html#section2">Уроки</a></li>
+        </div>
+
+    </footer>
+    <!-- ARROW UP -->
+    <div class="arrow-up"></div>
+    <!-- SCRIPT JS -->
+    <script src="script.js"></script>
+</body>
+</html>
