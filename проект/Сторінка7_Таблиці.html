@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиці</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav id="nav">
+        <a href="Головна_сторінка.html"><img src="images/logo1.svg" alt="logo"></a>
+        <div class="navigation">
+            <ul>
+                <img id="menu_btn_cross" src="images/menu_cross.svg" alt="Значок для закрытия меню">
+                <li><a href="Головна_сторінка.html">Головна</a></li>
+                <li><a href="Головна_сторінка.html#section2">Уроки</a></li>
+            </ul>
+            <img id="menu_btn" src="images/menu.svg" alt="Значок для открытия меню">
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <header>
+        <div class="container2">
+            <img src="images/page7_image.png" alt="Изображение текста">
+            <h1>Урок 6. Таблиці</h1>
+        </div>
+    </header>
+    <!--SECTION THEORY -->
+    <section id="theory">
+        <h1 class="head">Трохи теорії</h1>
+        <h3><span class="highlighted">Базова структура таблиці</span></h3>
+        <p class="main_text">Для створення таблиці використовується елемент <span style="font-weight:500;">table</span>. Вміст таблиці заповнюється рядок за рядком.</p>
+        <p class="main_text">Для створення початку рядку застосовується тег <span style="font-weight:500;">&lt;tr></span> (від "table row", що означає "рядок таблиці"), за ним слідує по одному для кожної комірки в тому рядку декілька елементів <span style="font-weight:500;">td</span> (від "table data", що означає "дані таблиці") . Та в кінці рядку використовується закриваючий тег <span style="font-weight:500;">&lt;/tr>.</span></p>
+        <p class="main_text">Для створення заголовку для колонки або рядку використовується елемент <span style="font-weight:500;">th</span>. Цей елемент не є обов'язковим для таблиці: замість нього можна використовувати вищезазначений елемент td. Однак текст елементу th відображається інакше, ніж інші осередки таблиці. Також даний елемент є корисним для користувачів, які використовують скрінрідери, а також th покращує здатність пошукових систем індексувати сторінки. Таким чином, є сенс використовувати саме цей елемент для заголовків таблиці.</p>
+        <p class="main_text_attention"><span class="attention">На що треба звернути увагу.</span> Ми не бачимо елементів стовпців. Кількість стовпців у таблиці визначається кількістю комірок у кожному рядку. Це одна з речей, які роблять таблиці HTML потенційно складними. З рядками легко — якщо ви хочете, щоб таблиця мала три рядки, просто використовуйте три елементи tr. В той же час для таблиці з чотирма стовпцями потрібно переконатися, що кожен рядок має чотири td або th елементи. Навіть, якщо осередок не має вмісту, все одно необхідно використовувати td або th елементи для наявності порожньої комірки, інакше таблиця буде відображена неправильно.</p>
+        <!-- <iframe src="adobe_captivate/good/index.html" width="1000" height="600"></iframe> -->
+        <p class="main_text">Нижче приведений приклад таблиці із використанням вищерозглянутих елементів її базової структури.</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGmKMYB" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/bGmKMYB">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+        <h3><span class="highlighted">Охоплення стовпців</span></h3>
+        <p class="main_text">Іноді вам можуть знадобитися записи в таблиці для розтягування у більш ніж одному стовпці. В даному випадку використовується атрибут <span style="font-weight:500;">colspan</span>, який вказує, скільки стовпців цей осередок повинен пройти поперек. Colspan може бути використаний в елемені th або td. Приведемо наступний приклад:</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="ZEqRogq" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/ZEqRogq">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+        <p class="main_text">В даному прикладі можна побачити, що в другому рядку осередок проходить через дві колонки, а в третьому — через три. Другий та третій рядки мають менше td елементів, аніж є колонок. Так необхідно робити через те, що, коли осередок розтягується більше ніж на одну колонку, td або th осередки, які б були в місцях більш широких осередків, не включаються у код. </p>
+        <h3><span class="highlighted">Охоплення рядків</span></h3>
+        <p class="main_text">Вам також можуть знадобитися записи в таблиці, які розтягуються на два рядки. Для цього в елементах td або th застосовується атрибут <span style="font-weight:500;">rowspan</span>. Даний атрибут вказує, відповідно, скільки рядків повинен охоплювати осередок. З таким атрибутом діє аналогічний принцип зменшення кількості елементів, як і в попередньому прикладі, тільки тут зменшується кількість tr елементів. Нижче приведений приклад коду із застосуванням даного атрибуту.</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLREqYL" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/yLREqYL">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+          <h3><span class="highlighted">Довгі таблиці</span></h3>
+          <p class="main_text">Існує три елементи, які допомагають розрізнити основний вміст таблиці на перший і останній рядки. Ці елементи допомагають людям, які використовують скрінрідери, а також дозволяють стилізувати ці секції іншим способом, ніж решту таблиці. Заголовки таких таблиць повинні розташовуватися всередині елемента <span style="font-weight:500;">thead</span>, основний контент таблиці повинен знаходитися в елементі <span style="font-weight:500;">tbody</span>, а нижній колонтитул — в <span style="font-weight:500;">tfoot</span>. Нижче приведений приклад використання цих елементів.</p>
+          <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJBEwOq" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/OJBEwOq">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+    </section>
+    <!--SECTION PRACTICE -->
+    <section id="practice">
+        <h1 class="head">Нарешті практика</h1>
+        <p class="main_text">В секцію "Про нас" додається таблиця, яка складається із базових елементів — <span style="font-weight:500;">th, tr</span> та <span style="font-weight:500;">td</span>. Заголовки групуються в елементі <span style="font-weight:500;">thead</span>. Всі використані елементи розглянуті в <a href="Сторінка7_Таблиці.html#theory">блоці з теорією</a>.</p>
+        <p class="main_text"><span class="idea">В останню колонку таблиці були додані email-адреси робітників.</span> Для того, щоб зробити їх більш доступними, тобто, щоб при натисканні на які відразу відкривалася пошта, можна додати в адресу префікс <span style="font-weight:500;">mailto:</span> , після якого прописується необхідна email-адреса.</p>
+        <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="BaqVPmE" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/BaqVPmE">
+            Сайт_Таблиця</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+          <p class="main_text">Таким чином, ми розібралися, як створювати таблиці на веб-сторінці.</p>
+          <div class="container_for_buttons">
+            <button class="buttons_lessons"><a href="Сторінка6_Зображення.html">Попередній урок</a></button>
+            <button class="buttons_lessons"><a href="Сторінка3_Текст.html">Наступний урок</a></button>
+        </div>
+    <!-- ARROW UP -->
+    <div class="arrow-up"></div>
+    <!-- SCRIPT JS -->
+    <script src="script.js"></script
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посилання</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+     <nav id="nav">
+        <a href="Головна_сторінка.html"><img src="images/logo1.svg" alt="logo"></a>
+        <div class="navigation">
+            <ul>
+                <img id="menu_btn_cross" src="images/menu_cross.svg" alt="Значок для закрытия меню">
+                <li><a href="Головна_сторінка.html">Головна</a></li>
+                <li><a href="Головна_сторінка.html#section2">Уроки</a></li>
+            </ul>
+            <img id="menu_btn" src="images/menu.svg" alt="Значок для открытия меню">
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <header>
+        <div class="container2">
+            <img src="images/page5_image.png" alt="Изображение текста">
+            <h1>Урок 4. Посилання</h1>
+        </div>
+    </header>
+    <!--SECTION THEORY -->
+    <section id="theory">
+        <h1 class="head">Трохи теорії</h1>
+        <p class="main_text">В HTML посилання створюються за допомогою елементу <span style="font-weight:500;">a</span>. Даний елемент має атрибут <span style="font-weight:500;">href</span> із URL-адресою необхідної сторінки. Існують два типи URL-адрес посилань: абсолютні та відносні.</p>
+        <h3><span class="highlighted">Абсолютні URL</span></h3>
+        <p class="main_text">Абсолютний URL – це повна адреса, що вказує на місцезнаходження ресурсу в Інтернеті, тобто це посилання на інші веб-сайти. Цей тип URL починається з протоколу, наприклад http:// або https://, містить назву домену та шлях до файлу. Нижче приведений приклад такого URL.</p>
+        <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="xxyjwZP" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/xxyjwZP">
+            Абсолютні URL</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+        <h3><span class="highlighted">Відносні URL</span></h3>
+        <p class="main_text">Відносний URL – це адреса, що вказує на місцезнаходження ресурсу відносно поточної веб-сторінки. Відносні URL складаються з двох частин: шляху та імені файлу.  Шлях може містити кілька рівнів папок та підпапок. Відносні URL зазвичай використовуються для створення посилань на інші сторінки в межах того ж сайту або на ресурси, які знаходяться в тій же директорії, що і поточна веб-сторінка. Приведемо приклад. Якщо ви маєте веб-сайт зі сторінкою "index.html", а на цій сторінці ви хочете створити посилання на сторінку "about.html", яка знаходиться в папці "pages", ви можете використовувати наступний відносний URL:</p>
+        <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="JjmvYBa" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/JjmvYBa">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+        <p class="main_text">Таким чином, відносні URL-адреси допомагають під час створення сайту на вашому комп'ютері, оскільки між ними можна створювати зв'язки між сторінками без необхідності налаштування доменного ім'я.</p>
+        <h3><span class="highlighted">Якірні посилання</span></h3>
+        <p class="main_text">Якірне посилання – це спеціальний тип посилання, який дозволяє перейти на конкретний елемент сторінки в межах однієї HTML-сторінки. Це корисний інструмент для навігації на довгих веб-сторінках, які містять багато інформації, та для створення зручної навігації для користувачів. 
+        <p class="main_text">Створення посилання на конкретне місце на сторінці — це процес, який складається з двох частин. Спочатку необхідно визначити місце призначення, а потім створити посилання на це місце. Для створення місця призначення використовується атрибут ідентифікатора (<span style="font-weight:500;">id</span>), щоб надати необхідному елементу в документі унікальне ім'я, тобто те ім'я, яке може з’явитися в документі лише один раз. А для створення посилання на це місце, як і з другими посиланнями, використовується елемент <span style="font-weight:500;">a</span> із атрибутом <span style="font-weight:500;">href</span>. В значенні цього атрибуту набирається символ <span style="font-weight:500;">#</span> та ідентифікатор елемента, який потрібно вказати у якірному посиланні. Нижче приведений приклад такого посилання.</p>
+        <p class="codepen" data-height="200" data-default-tab="html,result" data-slug-hash="GRYdjMj" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/GRYdjMj">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+        <p class="main_text">Також таким же чином якірні посилання можна створювати на інші документи за допомогою комбінації абсолютного або відносного URL та ідентифікатора елемента, на який потрібно посилатись. Подивимось на приклади.</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="Poyebpe" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/Poyebpe">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </section>
+    <!--SECTION PRACTICE -->
+    <section id="practice">
+        <h1 class="head">Нарешті практика</h1>
+        <p class="main_text">До сайту додаються відносні якірні посилання. До елементів заголовку різних секцій ("Послуги", "Про нас", "Зв'язок з нами") додаємо універсальні ідентифікатори: "services", "about" та "connection" відповідно, на які будуть створені посилання із блоку навігації.  В блоці навігації в кожний елемент списку додаємо посилання на фрагменти сайту.</p>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="YzJLpda" data-editable="true" data-user="maryna_kriukova" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/maryna_kriukova/pen/YzJLpda">
+            Untitled</a> by first_code (<a href="https://codepen.io/maryna_kriukova">@maryna_kriukova</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script><br><br>
+        <p class="main_text">Таким чином, ми вивчили, як створювати посилання на веб-сайті.</p>
+        <div class="container_for_buttons">
+            <button class="buttons_lessons"><a href="Сторінка4_Списки.html">Попередній урок</a></button>
+            <button class="buttons_lessons"><a href="Сторінка6_Зображення.html">Наступний урок</a></button>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer_col">
+            <li><a href="Головна_сторінка.html">Головна</a></li>
+        </div>
+        <div class="footer_col">
+            <a href="Головна_сторінка.html"><img src="images/logo_footer.svg" alt=""></a>
+        </div>
+        <div class="footer_col">
+            <li><a href="Головна_сторінка.html#section2">Уроки</a></li>
+        </div>
+
+    </footer>
+    <!-- ARROW UP -->
+    <div class="arrow-up"></div>
+    <!-- SCRIPT JS -->
+    <script src="script.js"></script>
+</body>
+</html>
